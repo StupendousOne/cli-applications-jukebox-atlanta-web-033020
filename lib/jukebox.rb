@@ -15,8 +15,7 @@ def play(songs)
   
   if songs.include?(choice)
     puts "Playing #{choice}"
-  elsif choice.to_i <= songs.length
-    binding.pry
+  elsif choice.to_i <= songs.length && choice.to_i > 0
     puts "Playing #{songs[choice.to_i - 1]}"
   else
     puts "Invalid input, please try again"
