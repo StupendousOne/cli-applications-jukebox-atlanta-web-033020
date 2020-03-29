@@ -15,7 +15,7 @@ def play(songs)
   
   if songs.include?(choice)
     puts "Playing #{choice}"
-  elsif choice.to_i <= songs.length && string.scan(/\D/).empty?
+  elsif choice.to_i <= songs.length && str !~ /\D/
     puts "Playing #{songs[choice.to_i - 1]}"
   else
     puts "Invalid input, please try again"
