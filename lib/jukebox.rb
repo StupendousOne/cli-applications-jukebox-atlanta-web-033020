@@ -27,15 +27,15 @@ def play
     puts "Playing #{choice}"
   else
     puts "Invalid input, please try again"
-  
+  end
 end
 
 def list
   i = 1
-  songs.each {|song| 
+  songs.each do |song| 
     puts "#{i}. #{song}"
     i += 1
-  }
+  end
 end
 
 def exit_jukebox
@@ -49,17 +49,17 @@ def run(songs)
   while continue_playing do
     input = gets.strip
     case input
-    when "help"
-      help
-    when "play"
-      play
-    when "list"
-      list
-    when "exit"
-      exit_jukebox
-      continue_playing = false
-    else
-      puts "Invalid choice please try again or type help for options"
+      when "help"
+        help
+      when "play"
+        play
+      when "list"
+        list
+      when "exit"
+        exit_jukebox
+        continue_playing = false
+      else
+        puts "Invalid choice please try again or type help for options"
     end
   end
 end
