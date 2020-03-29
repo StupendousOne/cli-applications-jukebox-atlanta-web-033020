@@ -19,7 +19,7 @@ def help
   puts "- exit : exits this program"
 end
 
-def play
+def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.strip
   
@@ -32,7 +32,7 @@ def play
   end
 end
 
-def list
+def list(songs)
   i = 1
   songs.each do |song| 
     puts "#{i}. #{song}"
