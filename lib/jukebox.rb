@@ -1,4 +1,6 @@
 # Add your code here
+require "pry"
+
 def help
   puts "I accept the following commands:"
   puts "- help : displays this help message"
@@ -10,6 +12,8 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   choice = gets.strip
+  
+  binding.pry
   
   if songs.include?(choice)
     puts "Playing #{choice}"
