@@ -25,6 +25,8 @@ def play
   
   if songs.includes?(choice)
     puts "Playing #{choice}"
+  else if choice.to_i <= songs.length
+    puts "Playing #{songs[choice.to_i - 1]}"
   else
     puts "Invalid input, please try again"
   end
