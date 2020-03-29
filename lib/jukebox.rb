@@ -12,6 +12,7 @@ def play(songs)
   choice = gets.strip
   
   pp choice.to_i
+  pp songs.length
   
   if songs.include?(choice)
     puts "Playing #{choice}"
